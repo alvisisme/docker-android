@@ -1,4 +1,4 @@
-FROM ubuntu:18.04git
+FROM ubuntu:18.04
 
 RUN apt-get -q -y update &&\
     apt-get -q -y --no-install-recommends install \
