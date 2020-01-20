@@ -16,3 +16,10 @@ script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build --pull -t alvisisme/android-sdk:$ANDROID_COMPILE_SDK-$ANDROID_BUILD_TOOLS-$GRADLE_VERSION --build-arg ANDROID_COMPILE_SDK=$ANDROID_COMPILE_SDK --build-arg ANDROID_BUILD_TOOLS=$ANDROID_BUILD_TOOLS --build-arg GRADLE_VERSION=$GRADLE_VERSION .
   - docker push alvisisme/android-sdk:$ANDROID_COMPILE_SDK-$ANDROID_BUILD_TOOLS-$GRADLE_VERSION
+
+notifications:
+  email:
+    recipients:
+      - alvisisme@163.com
+    on_success: never
+    on_failure: always
