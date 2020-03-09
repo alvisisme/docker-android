@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
-RUN apt-get -q -y update &&\
-    apt-get -q -y --no-install-recommends install \
+RUN apt-get -q -y update \
+    && DEBIAN_FRONTEND=noninteractive apt-get -q -y --no-install-recommends install \
       openjdk-8-jdk \
       git \
       wget \
@@ -17,9 +17,9 @@ ENV CLASSPATH .:/usr/lib/jvm/java-8-openjdk-amd64/lib
 
 ARG GRADLE_VERSION
 ENV GRADLE_HOME /gradle-${GRADLE_VERSION}
-RUN wget -q https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip && \
-    unzip -q gradle-${GRADLE_VERSION}-bin.zip &&\
-    rm gradle-${GRADLE_VERSION}-bin.zip
+RUN wget -q https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip \
+    && unzip -q gradle-${GRADLE_VERSION}-bin.zip \
+    && rm gradle-${GRADLE_VERSION}-bin.zip
 ENV PATH ${GRADLE_HOME}/bin:$PATH
 
 ENV ANDROID_HOME /android-sdk-linux
