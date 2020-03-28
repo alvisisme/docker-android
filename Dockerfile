@@ -17,8 +17,8 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 ARG GRADLE_VERSION
 ENV GRADLE_HOME /gradle-${GRADLE_VERSION}
 RUN wget -q https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-all.zip \
-    && unzip -q gradle-${GRADLE_VERSION}-bin.zip \
-    && rm gradle-${GRADLE_VERSION}-bin.zip
+    && unzip -q gradle-${GRADLE_VERSION}-all.zip \
+    && rm gradle-${GRADLE_VERSION}-all.zip
 ENV PATH ${GRADLE_HOME}/bin:$PATH
 
 ENV ANDROID_HOME /android-sdk-linux
