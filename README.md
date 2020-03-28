@@ -1,6 +1,6 @@
 # Build Android App in Docker
 
-[![Build Status](https://img.shields.io/travis/com/alvisisme/docker-android?style=flat-square)](https://travis-ci.com/alvisisme/docker-android)
+![Docker Automated build](https://img.shields.io/docker/automated/alvisisme/android-sdk)
 ![Docker Pulls](https://img.shields.io/docker/pulls/alvisisme/android-sdk?style=flat-square)
 
 Android应用的构建镜像，主要用于CI/CD自动化。
@@ -24,19 +24,6 @@ alvisisme/android-sdk:[ANDROID_COMPILE_SDK]-[ANDROID_BUILD_TOOLS]-[GRADLE_VERSIO
 版本主要对应cordova自动创建的默认工程配置，有特定版本需求可以按照用法一节自己构建。
 
 ## 用法
-
-构建对应版本镜像
-
-```bash
-ANDROID_COMPILE_SDK=28
-ANDROID_BUILD_TOOLS=28.0.3
-GRADLE_VERSION=4.10.3
-docker build --pull -t alvisisme/android-sdk:$ANDROID_COMPILE_SDK-$ANDROID_BUILD_TOOLS-$GRADLE_VERSION \
-    --build-arg ANDROID_COMPILE_SDK=$ANDROID_COMPILE_SDK \
-    --build-arg ANDROID_BUILD_TOOLS=$ANDROID_BUILD_TOOLS \
-    --build-arg GRADLE_VERSION=$GRADLE_VERSION \
-    .
-```
 
 拉取Docker Hub镜像
 
