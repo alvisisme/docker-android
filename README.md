@@ -1,6 +1,7 @@
 # Build Android App in Docker
 
-![Docker Automated build](https://img.shields.io/docker/automated/alvisisme/android-sdk)
+![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/alvisisme/android-sdk)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/alvisisme/android-sdk)
 ![Docker Pulls](https://img.shields.io/docker/pulls/alvisisme/android-sdk?style=flat-square)
 
 Android应用的构建镜像，主要用于CI/CD自动化。
